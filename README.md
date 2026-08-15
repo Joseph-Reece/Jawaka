@@ -10,41 +10,49 @@ Contact: 0715 083 866 · sales@jawaka.co.ke · Karatina, Nyeri County
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The deployed site. Add SEO head tags here. |
-| `Jawaka Distributors.dc.html` | Editable design source. `index.html` is generated from this. |
-| `support.js` | Runtime required by both HTML files. Do not edit. |
+| `index.html` | The whole site. This is the source of truth — edit it here. |
+| `support.js` | Runtime required by `index.html`. Do not edit. |
 | `favicon.svg` | Site icon. |
 
-`index.html` and `Jawaka Distributors.dc.html` are the same document apart from the
-extra `<head>` tags in `index.html`. When you change the design, edit the `.dc.html`
-source and regenerate `index.html`.
+## Editing in VS Code
+
+`index.html` loads `support.js`, so opening the file directly over `file://` will not
+work. Use the **Live Server** extension: right-click `index.html` → *Open with Live
+Server*.
+
+Structure of `index.html`:
+
+- `<head>` — title, meta description, Open Graph tags, favicon.
+- `<x-dc>…</x-dc>` — the markup for every page, top to bottom: nav, Home, About,
+  Products, Consultation, Learning Centre, Farmer Resources, FAQ, Contact, footer.
+  Each page sits in its own `<sc-if>` block. Styling is inline on the elements.
+- `<script data-dc-script>` at the bottom — `class Component`, holding all page data
+  (feed brands, articles, FAQs, vaccination schedule, feeding charts, checklist) and
+  the calculator logic. Content lives in the `…Data` properties near the top of the
+  class; that is usually the part you want.
+
+Commit and push to `main` when done — Cloudflare redeploys automatically.
 
 ## Deploy to Cloudflare Pages
 
-There is no build step — Cloudflare serves these files as-is.
+No build step; Cloudflare serves these files as-is.
 
 1. Push this repository to `main` on GitHub.
-2. In the Cloudflare dashboard go to **Workers & Pages → Create → Pages → Connect to Git**.
+2. Cloudflare dashboard → **Workers & Pages → Create → Pages → Connect to Git**.
 3. Authorise GitHub and select **Joseph-Reece/Jawaka**.
-4. Configure the build:
-   - Production branch: `main`
-   - Framework preset: **None**
-   - Build command: *leave empty*
-   - Build output directory: `/`
-5. Click **Save and Deploy**. The site goes live at `https://jawaka.pages.dev`.
+4. Production branch `main` · Framework preset **None** · Build command *empty* ·
+   Build output directory `/`.
+5. **Save and Deploy** → live at `https://jawaka.pages.dev`.
 
-Every later push to `main` redeploys automatically.
+### Custom domain (jawaka.co.ke)
 
-### Custom domain (when you are ready for jawaka.co.ke)
+Pages project → **Custom domains → Set up a domain**, enter `jawaka.co.ke`, follow the
+DNS instructions. Then update the `canonical` and `og:url` tags in `index.html`.
 
-In the Pages project open **Custom domains → Set up a domain**, enter `jawaka.co.ke`,
-and follow the DNS instructions Cloudflare shows. Then update the `og:url` and
-`canonical` tags in `index.html` to the new address.
-
-## Notes
+## Still outstanding
 
 - Photo and map areas are placeholders pending real photography.
 - The contact form opens WhatsApp with the message pre-filled; no server or email
   service is involved.
-- Resource "Download PDF" buttons currently show a confirmation only — the PDF files
-  still need to be produced and linked.
+- Resource "Download PDF" buttons show a confirmation only — the PDF files still need
+  to be produced and linked.
