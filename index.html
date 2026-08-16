@@ -115,8 +115,8 @@
                 WhatsApp Us</a>
             </div>
           </div>
-          <div style="position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/3;background:repeating-linear-gradient(-45deg,#1A5C31,#1A5C31 14px,#164a28 14px,#164a28 28px);display:flex;align-items:center;justify-content:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.5)">
-            <span style="font-family:monospace;color:#E8C158;font-size:13px;text-align:center;padding:20px">[ PHOTO: healthy broiler flock<br>in a modern poultry house ]</span>
+          <div style="position:relative;border-radius:6px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 30px 60px -20px rgba(0,0,0,0.5)">
+            <img src="images/hero-poultry-house.jpg" alt="Healthy broiler flock inside a modern poultry house" style="width:100%;height:100%;object-fit:cover;display:block">
           </div>
         </div>
       </div>
@@ -237,8 +237,8 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px">
           <sc-for list="{{ homeArticles }}" as="a" hint-placeholder-count="3">
             <div style="background:#fff;border:1px solid #ECE9DF;border-radius:8px;overflow:hidden;cursor:pointer;transition:transform 0.25s ease,box-shadow 0.25s ease" style-hover="transform:translateY(-4px);box-shadow:0 14px 28px -14px rgba(15,31,20,0.18)" onClick="{{ goToLearning }}">
-              <div style="aspect-ratio:16/10;background:repeating-linear-gradient(45deg,#EDEAE0,#EDEAE0 10px,#E4E0D3 10px,#E4E0D3 20px);display:flex;align-items:center;justify-content:center">
-                <span style="font-family:monospace;font-size:11px;color:#9A9484">[ IMAGE ]</span>
+              <div style="aspect-ratio:16/10;overflow:hidden">
+                <img src="{{ a.image }}" alt="{{ a.title }}" style="width:100%;height:100%;object-fit:cover;display:block">
               </div>
               <div style="padding:22px">
                 <div style="color:#D4A017;font-size:12px;font-weight:700;letter-spacing:0.5px;margin-bottom:10px">{{ a.category }}</div>
@@ -285,8 +285,8 @@
             <div style="color:#114B26;font-weight:600;font-size:14.5px;margin-bottom:6px">Mon &ndash; Sat, 7:00am &ndash; 6:00pm</div>
             <div style="color:#114B26;font-weight:600;font-size:14.5px">0715 083 866 &middot; sales@jawaka.co.ke</div>
           </div>
-          <div style="aspect-ratio:16/10;background:repeating-linear-gradient(135deg,#E4E8E1,#E4E8E1 16px,#DCE1D8 16px,#DCE1D8 32px);display:flex;align-items:center;justify-content:center">
-            <span style="font-family:monospace;font-size:12px;color:#7C8577">[ MAP: Karatina, Nyeri ]</span>
+          <div style="aspect-ratio:16/10;overflow:hidden">
+            <iframe src="https://www.google.com/maps?q=Karatina,+Nyeri+County,+Kenya&output=embed" title="Map showing Karatina, Nyeri County" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:0;display:block"></iframe>
           </div>
         </div>
       </div>
@@ -302,8 +302,8 @@
       </div>
       <div style="max-width:1000px;margin:0 auto;padding:clamp(60px,8vw,100px) clamp(20px,4vw,40px)">
         <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;align-items:center;margin-bottom:80px">
-          <div style="aspect-ratio:4/3;border-radius:8px;background:repeating-linear-gradient(-45deg,#EDEAE0,#EDEAE0 14px,#E4E0D3 14px,#E4E0D3 28px);display:flex;align-items:center;justify-content:center">
-            <span style="font-family:monospace;font-size:12px;color:#9A9484;text-align:center">[ PHOTO: depot / team with farmer ]</span>
+          <div style="aspect-ratio:4/3;border-radius:8px;overflow:hidden">
+            <img src="images/about-hatchery.jpg" alt="Day-old chicks warming under brooder lamps at a Jawaka poultry depot" style="width:100%;height:100%;object-fit:cover;display:block">
           </div>
           <div>
             <h2 style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(24px,2.8vw,30px);color:#0F1F14;margin:0 0 18px">Our story</h2>
@@ -469,8 +469,8 @@
       <div class="reveal" style="max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,60px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px">
         <sc-for list="{{ filteredArticles }}" as="a" hint-placeholder-count="9">
           <div style="background:#fff;border:1px solid #ECE9DF;border-radius:8px;overflow:hidden;cursor:pointer;transition:transform 0.25s ease,box-shadow 0.25s ease" style-hover="transform:translateY(-4px);box-shadow:0 14px 28px -14px rgba(15,31,20,0.18)">
-            <div style="aspect-ratio:16/10;background:repeating-linear-gradient(45deg,#EDEAE0,#EDEAE0 10px,#E4E0D3 10px,#E4E0D3 20px);display:flex;align-items:center;justify-content:center">
-              <span style="font-family:monospace;font-size:11px;color:#9A9484">[ IMAGE ]</span>
+            <div style="aspect-ratio:16/10;overflow:hidden">
+              <img src="{{ a.image }}" alt="{{ a.title }}" style="width:100%;height:100%;object-fit:cover;display:block">
             </div>
             <div style="padding:22px">
               <div style="color:#D4A017;font-size:12px;font-weight:700;letter-spacing:0.5px;margin-bottom:10px">{{ a.category }}</div>
@@ -712,8 +712,8 @@
               <div><div style="font-weight:700;font-size:14.5px;color:#0F1F14">Business Hours</div><div style="font-size:14.5px;color:#5B6660">Mon &ndash; Sat, 7:00am &ndash; 6:00pm</div></div>
             </div>
           </div>
-          <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#E4E8E1,#E4E8E1 16px,#DCE1D8 16px,#DCE1D8 32px);border-radius:8px;display:flex;align-items:center;justify-content:center">
-            <span style="font-family:monospace;font-size:12px;color:#7C8577">[ MAP: Karatina, Nyeri ]</span>
+          <div style="aspect-ratio:4/3;border-radius:8px;overflow:hidden">
+            <iframe src="https://www.google.com/maps?q=Karatina,+Nyeri+County,+Kenya&output=embed" title="Map showing Karatina, Nyeri County" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:100%;height:100%;border:0;display:block"></iframe>
           </div>
         </div>
 
@@ -844,6 +844,13 @@ class Component extends DCLogic {
 
   learningCategoriesData = ['All', 'Broiler Farming', 'Layer Farming', 'Housing', 'Feeds', 'Vaccines', 'Disease Prevention', 'Farm Economics', 'Equipment'];
 
+  categoryImages = {
+    'Broiler Farming': 'images/cat-broiler.jpg', 'Layer Farming': 'images/cat-layer.jpg',
+    'Housing': 'images/cat-housing.jpg', 'Feeds': 'images/cat-feeds.jpg',
+    'Vaccines': 'images/cat-vaccines.jpg', 'Disease Prevention': 'images/cat-disease.jpg',
+    'Farm Economics': 'images/cat-economics.jpg', 'Equipment': 'images/cat-housing.jpg'
+  };
+
   articlesData = [
     { title: 'How to Start a 500 Bird Broiler Farm', desc: 'A practical, step-by-step budget and setup plan for first-time broiler farmers.', readTime: '7 min read', category: 'Broiler Farming' },
     { title: 'Complete Broiler Feeding Program', desc: 'What to feed, how much, and when — from day-old to market weight.', readTime: '6 min read', category: 'Feeds' },
@@ -857,7 +864,7 @@ class Component extends DCLogic {
     { title: 'Choosing Between Broilers and Layers', desc: 'How to decide which is the better fit for your goals and budget.', readTime: '7 min read', category: 'Farm Economics' },
     { title: 'How to Improve Feed Conversion Ratio', desc: 'Practical changes that get more growth out of every kilo of feed.', readTime: '7 min read', category: 'Feeds' },
     { title: 'Preparing for Day Old Chicks', desc: 'Your pre-arrival checklist so chicks land in a ready, safe brooder.', readTime: '5 min read', category: 'Housing' }
-  ];
+  ].map(a => ({ ...a, image: this.categoryImages[a.category] || 'images/cat-broiler.jpg' }));
 
   faqData = [
     { q: 'Which feed should I use?', a: 'It depends on your bird type and stage — broiler vs layer, and starter vs grower vs finisher. Call or WhatsApp us with your bird type and age and our team will recommend the right feed.' },
